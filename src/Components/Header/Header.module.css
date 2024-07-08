@@ -1,0 +1,22 @@
+.title {
+    color: #CA6C37;
+    font-family: "El Messiri", sans-serif;
+}
+
+.subTitle {
+    color: #422398;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+}
+
+.linha {
+    width: 200px;
+    height: 2px;
+    background: #422398;
+}
