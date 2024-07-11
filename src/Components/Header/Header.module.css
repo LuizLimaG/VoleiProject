@@ -25,3 +25,21 @@
 .fontSize {
     font-size: 18px;
 }
+
+.backButton {
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    color: #CA6C37;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: 500;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+.backButton:hover {
+    text-decoration: underline;
+    color: #CA6C37;
+}

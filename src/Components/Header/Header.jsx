@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
 
 export default function Header({ header1, header2, header3, nomePais }) {
@@ -35,6 +36,9 @@ export default function Header({ header1, header2, header3, nomePais }) {
             )}
             {header3 && (
                 <header>
+                    <Link to={'/'} className={styles.backButton}>
+                        ⬅ Voltar
+                    </Link>
                     <h1 className={styles.title}>
                         Jogadoras
                     </h1>
