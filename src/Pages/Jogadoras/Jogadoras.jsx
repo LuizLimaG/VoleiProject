@@ -47,6 +47,7 @@ export default function Jogadoras() {
             <section className={styles.playersSection}>
                 {jogadoras.map(j => (
                     <CardJogadoras key={j.nome}
+                        imagem={pais.bandeira}
                         nomejogadora={j.nome}
                         camisaJogadora={j.numero_camisa}
                         posicaoJogadora={j.posicao} />

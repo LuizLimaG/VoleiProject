@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import Card from '../../Components/Card/Card'
 import Header from '../../Components/Header/Header'
+import Card from '../../Components/Card/Card'
+import Footer from '../../Components/Footer/Footer'
 import styles from "./Home.module.css"
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <Footer />
     </>
   )
 }
