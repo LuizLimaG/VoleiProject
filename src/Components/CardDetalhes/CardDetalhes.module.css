@@ -1,0 +1,73 @@
+.cardDetalhes {
+    width: 80%;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.subCard {
+    width: 70%;
+    height: 150px;
+    border-radius: 20px;
+    border: 2px solid #302681;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoSection {
+    text-align: center;
+    color: #CA6C37;
+}
+
+.titleDetalhes {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.infoSection span {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.jogadorasBotao {
+    background: none;
+    color: #CA6C37;
+    padding: 15px 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    transition: .17s ;
+}
+
+.jogadorasBotao:hover {
+    text-decoration: underline;
+}
+
+.backButton {
+    border: none;
+    height: 20px;
+}
+
+.voltarBotao {
+    color: #CA6C37;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+    border: none;
+}   
+
+.voltarBotao:hover {
+    text-decoration: underline;
+    color: #CA6C37;
+}

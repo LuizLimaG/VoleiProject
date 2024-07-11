@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from '../../Components/Header/Header'
 import styles from './Detalhes.module.css'
 import { useNavigate, useParams } from 'react-router-dom'
+import CardDetalhes from '../../Components/CardDetalhes/CardDetalhes'
 
 export default function Detalhes(){
 
@@ -10,23 +11,26 @@ export default function Detalhes(){
     const [pais, setPais] = useState(null)
 
     useEffect(() => {
-        const url = './vnl.json'
+        const url = '/vnl.json'
         
         fetch(url)
         .then((res) => res.json())
         .then((data) => {
+
             const paisEncontrado = data.find((f) => f.id === parseInt(paisId))
+
             if (paisEncontrado) {
                 setPais(paisEncontrado)
             } else {
                 navigate("/")
             }
+
         })
-        .catch((erro) => {
-            console.log(erro)
+        .catch((error) => {
+            console.log(error)
             navigate("/")
         })
-    }), [paisId, navigate]
+    }, [paisId, navigate])
 
     if (!pais) {
         return <div> Carregando... </div>
@@ -34,10 +38,12 @@ export default function Detalhes(){
 
     return(
         <>
-            <div>
-                <h1>{pais.nome}</h1>
-                <img src={pais.bandeira} alt={pais.nome} />
-            </div>
+            <Header header2 nomePais={pais.nome} />
+            <section className={styles.cardDetalhes}>
+                <CardDetalhes id={pais.id} anoFunacao={pais.ano_fundacao} cidade={pais.cidade} tecnico={pais.tecnico}>
+                    
+                </CardDetalhes>
+            </section>
         </>
     )
 }
