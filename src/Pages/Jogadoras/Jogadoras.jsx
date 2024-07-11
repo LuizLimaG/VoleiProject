@@ -2,6 +2,7 @@ import Header from '../../Components/Header/Header'
 import CardJogadoras from '../../Components/CardJogadoras/CardJogadoras'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import styles from './Jogadoras.module.css'
 
 export default function Jogadoras() {
 
@@ -18,9 +19,9 @@ export default function Jogadoras() {
             .then((data) => {
 
                 const paisEncontrado = data.find((f) => f.id === parseInt(paisId))
-
                 if (paisEncontrado) {
                     setPais(paisEncontrado)
+                    setJogadoras(paisEncontrado.jogadoras)
                 } else {
                     navigate("/")
                 }
@@ -32,16 +33,9 @@ export default function Jogadoras() {
             })
     }, [paisId, navigate])
 
-    useEffect(() => {
-        const url = '/vnl.json'
-
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => {
-                setJogadoras(data.jogadoras)
-                console.log(data.jogadoras)
-            })
-    }, [])
+    jogadoras.map((f) => {
+        console.log(f.nome)
+    })
 
     if (!pais) {
         return <div> Carregando... </div>
@@ -50,12 +44,14 @@ export default function Jogadoras() {
     return (
         <>
             <Header header3 nomePais={pais.nome} />
-            {jogadoras.map(jogadora => {
-                <CardJogadoras key={jogadora.nome}
-                    nomejogadora={jogadora.nome}
-                    camisaJogadora={jogadora.numero_camisa}
-                    posicaoJogadora={jogadora.posicao} />
-            })}
+            <section className={styles.playersSection}>
+                {jogadoras.map(j => (
+                    <CardJogadoras key={j.nome}
+                        nomejogadora={j.nome}
+                        camisaJogadora={j.numero_camisa}
+                        posicaoJogadora={j.posicao} />
+                ))}
+            </section>
         </>
     )
 }

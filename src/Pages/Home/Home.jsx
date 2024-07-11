@@ -13,6 +13,10 @@ export default function Home() {
       .then(data => setPaises(data))
   })
 
+  paises.map((f) => {
+    console.log(f.nome)
+  })
+
   return (
     <>
       <Header header1></Header>
