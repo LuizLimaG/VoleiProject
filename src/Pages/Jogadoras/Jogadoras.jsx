@@ -33,10 +33,6 @@ export default function Jogadoras() {
             })
     }, [paisId, navigate])
 
-    jogadoras.map((f) => {
-        console.log(f.nome)
-    })
-
     if (!pais) {
         return <div> Carregando... </div>
     }
