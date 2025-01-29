@@ -1,23 +1,23 @@
 .card {
-    width: 490px;
-    height: 300px;
+    width: 300px;
+    height: 150px;
     
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     
     border-radius: 20px;
     background: #ececec;
     border: 2px solid #302681;
     box-shadow: 0px 0px 15px -10px #302681;
 
-    transition: all .5s ease;
+    transition: all .2s ease;
 }
 
 .card:hover {
-    transform: scale(1.04);
-    box-shadow: 0px 0px 20px -10px rgb(0, 0, 0);
+    transform: scale(1.01);
+    box-shadow: 0px 0px 20px -17px rgb(0, 0, 0);
 }
 
 .detailsBtn {
@@ -27,7 +27,7 @@
     border: 1px solid #CA6C37;
     padding: 5px 10px;
     border-radius: 8px;
-    font-size: 1em;
+    font-size: 13px;
     font-weight: 700;
     cursor: pointer;
     transition: border-color 0.25s;
@@ -45,8 +45,8 @@
 }
 
 .rightCard {
-    width: 160px;
-    height: 160px;
+    width: 60px;
+    height: 57px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0px 0px 15px -10px #302681;
@@ -55,4 +55,8 @@
 .leftCard {
     text-align: center;
     color: #302681;
+}
+
+.nome {
+    font-size: 30px;
 }

@@ -1,7 +1,7 @@
 .section {
-    width: 100%;
+    max-width: 900px;
     height: 100%;
-    
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,9 +9,7 @@
 }
 
 .paises {
-    width: 1200px;
-    height: 800px;
-
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
